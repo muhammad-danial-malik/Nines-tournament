@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tournament</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" type="image/png" href="../img/NiNES_icon.png" sizes="32x32">
+</head>
+
+<body>
+    <div id="ninesTournamnetContainer" class="container-fluid p-0">
+
+        <!-- navbar container start -->
+
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-body-dark">
+                <div class="container-fluid">
+                    <a href="#" id="logo"><img src="../img/logo.png" alt="logo" /></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#denNavbar"
+                        aria-controls="denNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="denNavbar">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html"><i class="fas fa-home"></i> Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/about.html"><i class="fas fa-info-circle"></i>
+                                    About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../pages/tournament.html"><i class="fas fa-trophy"></i>
+                                    Tournament</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/events.html"><i class="fas fa-calendar-alt"></i>
+                                    Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/rating.html"><i class="fas fa-users"></i>Rating</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/news.html"><i class="fas fa-newspaper"></i> News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/faqs.html"><i class="fas fa-question-circle"></i>
+                                    FAQs</a>
+                            </li>
+                        </ul>
+                        <div class="nav-item">
+                            <button class="btn loginBtn" onclick="redirectToIndex()">Login Here</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- navbar container ends -->
+
+        <!-- body container starts -->
+
+        <div class="container">
+            <div class="hero">
+                <h1 class="text-white"><span>NiNES</span> TOURNAMENTS</h1>
+            </div>
+
+            <!-- Tournaments Schedule -->
+            <div class="mt-5">
+                <h3 class="text-white">Tournaments Schedule</h3>
+                <div class="tournament-table mt-3">
+                    <div class="no-tournaments text-center p-5 ">
+                        <p class="text-white m-0">No current tournaments</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finished Tournaments -->
+            <div class="mt-5">
+                <h3 class="text-white">Finished Tournaments</h3>
+                <!-- Scrollable Wrapper -->
+                <div class="table-responsive mt-3">
+                    <div class="tournament-table finished-tournament px-4">
+                        <!-- Header Row -->
+                        <div class="row header px-3">
+                            <div class="col-4">Tournament</div>
+                            <div class="col-2">Prize</div>
+                            <div class="col-2">Participants</div>
+                            <div class="col-2">Winner</div>
+                            <div class="col-2 text-end">Region</div>
+                        </div>
+                        <!-- Tournament Rows -->
+                        <div class="row px-3">
+                            <div class="col-4">
+                                <span class="text-green">FINISHED</span><br>
+                                <span>27 Jan 16:00</span>
+                            </div>
+                            <div class="col-2">17800 points</div>
+                            <div class="col-2">15</div>
+                            <div class="col-2">KishMish</div>
+                            <div class="col-2 text-end">CIS</div>
+                        </div>
+                        <div class="row px-3">
+                            <div class="col-4">
+                                <span class="text-green">FINISHED</span><br>
+                                <span>20 Jan 16:00</span>
+                            </div>
+                            <div class="col-2">13500 points</div>
+                            <div class="col-2">26</div>
+                            <div class="col-2">NeverGiveUp</div>
+                            <div class="col-2 text-end">CIS</div>
+                        </div>
+                        <div class="row px-3">
+                            <div class="col-4">
+                                <span class="text-green">FINISHED</span><br>
+                                <span>13 Jan 16:00</span>
+                            </div>
+                            <div class="col-2">12000 points</div>
+                            <div class="col-2">15</div>
+                            <div class="col-2">BubaGoKill</div>
+                            <div class="col-2 text-end">CIS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="mt-4">
+                <ul id="pagination">
+                    <li><a class="" href="#">«</a></li>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- body container ends -->
+
+        <!-- footer container starts -->
+
+        <div class="container-fluid">
+            <footer class="footercolor row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 m-1 m-md-4 top">
+                <div class="col mb-3">
+                    <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                        <img src="../img/logo.png" alt="logo" />
+                    </a>
+                    <p class="text-body-secondary">© 2024</p>
+                    <div class="social-media mt-5">
+                        <a href="#" class="me-3 text-body-secondary"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3 text-body-secondary"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3 text-body-secondary"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-body-secondary"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="col mb-3"></div>
+
+                <div class="col mb-3">
+                    <h5>Navigation</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="../index.html" class="nav-link p-0 text-body-secondary">Home</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="./about.html" class="nav-link p-0 text-body-secondary">About</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="./tournament.html" class="nav-link p-0 text-body-secondary">Tournament</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="./events.html" class="nav-link p-0 text-body-secondary">Events</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col mb-3">
+                    <h5>Navigation</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="./rating.html" class="nav-link p-0 text-body-secondary">Rating</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="./faqs.html" class="nav-link p-0 text-body-secondary">FAQs</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="./news.html" class="nav-link p-0 text-body-secondary">News</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col mb-3">
+                    <h5>Company</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">About Us</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Partners</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Jobs</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+        <!-- footer container ends  -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

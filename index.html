@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nines Tournament</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="./img/NiNES_icon.png" sizes="32x32">
+</head>
+
+<body>
+  <div id="ninesTournamnetContainer" class="container-fluid p-0">
+
+    <!-- navbar container start -->
+
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-body-dark">
+        <div class="container-fluid">
+          <a href="#" id="logo"><img src="./img/logo.png" alt="logo" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ninesNavbar"
+            aria-controls="ninesNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="ninesNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html"><i class="fas fa-home"></i> Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/about.html"><i class="fas fa-info-circle"></i> About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/tournament.html"><i class="fas fa-trophy"></i> Tournament</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/events.html"><i class="fas fa-calendar-alt"></i> Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/rating.html"><i class="fas fa-users"></i> Rating</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/news.html"><i class="fas fa-newspaper"></i> News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/faqs.html"><i class="fas fa-question-circle"></i> FAQs</a>
+              </li>
+            </ul>
+            <div class="nav-item">
+              <button class="btn loginBtn" onclick="activateLogin()">Login Here</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- navbar container ends -->
+
+    <!-- body container starts -->
+
+    <div class="container-fluid mt-3">
+      <div class="upperSection row">
+        <div class="col-lg-3 col-sm-6 order-lg-first order-last">
+          <div class="container-fluid ninesCard card shadow my-2" id="login-card">
+            <div class="login-div">
+              <p>login via</p>
+            </div>
+            <div class="line"></div>
+            <div class="level">
+              <span>Your level</span> <span>0,000 / 0,000</span>
+            </div>
+            <div class="money">
+              <span><i class="fas fa-money-bill gradient-icon"></i> 0,000</span>
+              <span><i class="fas fa-coins gradient-icon"></i></i> 0,000</span>
+            </div>
+            <button class="signin-btn" onclick="activateSignUp()">Sign Up</button>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="container-fluid ninesCard card shadow my-2" id="tournament-card">
+            <button class="over-btn">over</button>
+            <h2>main event</h2>
+            <button class="over-btn btn-color">double elimination</button>
+            <a href="./pages/tournament.html" class="over-btn apply-color">apply</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="container-fluid ninesCard card shadow my-2 player-rank">
+            <div class="topbar">
+              <span>Players TOP</span>
+            </div>
+
+            <br>
+
+            <div class="playersTopCard">
+              <div class="imgDiv">
+                <img src="./img/NiNES_icon.png" alt="">
+              </div>
+              <div class="descDiv">
+                <div class="topDesc">dawn7#0606</div>
+                <div class="bottomDesc">
+                  <div class="leftDesc">
+                    <span>1606</span>
+                    <span>ELO</span>
+                  </div>
+                  <div class="dotDiv"></div>
+                  <div class="rightDesc">gold</div>
+                </div>
+              </div>
+              <div class="numDiv">1</div>
+            </div>
+
+            <br>
+
+            <div class="playersTopCard">
+              <div class="imgDiv">
+                <img src="./img/profile3.png" alt="">
+              </div>
+              <div class="descDiv">
+                <div class="topDesc">Kataomi#ooo</div>
+                <div class="bottomDesc">
+                  <div class="leftDesc">
+                    <span>1542</span>
+                    <span>ELO</span>
+                  </div>
+                  <div class="dotDiv"></div>
+                  <div class="rightDesc">silver</div>
+                </div>
+              </div>
+              <div class="numDiv">2</div>
+            </div>
+
+            <br>
+
+            <div class="playersTopCard">
+              <div class="imgDiv">
+                <img src="./img/profile2.png" alt="">
+              </div>
+              <div class="descDiv">
+                <div class="topDesc">Padaomi#222</div>
+                <div class="bottomDesc">
+                  <div class="leftDesc">
+                    <span>1606</span>
+                    <span>ELO</span>
+                  </div>
+                  <div class="dotDiv"></div>
+                  <div class="rightDesc">silver</div>
+                </div>
+              </div>
+              <div class="numDiv">3</div>
+            </div>
+
+            <br>
+
+            <div class="playersTopCard">
+              <div class="imgDiv">
+                <img src="./img/NiNES_icon.png" alt="">
+              </div>
+              <div class="descDiv">
+                <div class="topDesc">Hkskiro#999</div>
+                <div class="bottomDesc">
+                  <div class="leftDesc">
+                    <span>1524</span>
+                    <span>ELO</span>
+                  </div>
+                  <div class="dotDiv"></div>
+                  <div class="rightDesc">silver</div>
+                </div>
+              </div>
+              <div class="numDiv">4</div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="lowerSection row">
+        <div class="col-lg-3 col-sm-6">
+          <div class="container-fluid ninesCard card shadow my-2" id="teammateCard">
+            <div class="topbar">
+              <p>Teammates</p>
+            </div>
+
+            <div class="teamMatesAll">
+              <div class="team-mate">
+                <div class="title">
+                  <span class="fw-bold mb-1">Name</span>
+                  <span>01 dec</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo...</p>
+              </div>
+              <div class="team-mate">
+                <div class="title">
+                  <span class="fw-bold mb-1">Name</span>
+                  <span>01 dec</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo...</p>
+              </div>
+              <div class="team-mate">
+                <div class="title">
+                  <span class="fw-bold mb-1">Name</span>
+                  <span>01 dec</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo...</p>
+              </div>
+              <div class="team-mate">
+                <div class="title">
+                  <span class="fw-bold mb-1">Name</span>
+                  <span>01 dec</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo...</p>
+              </div>
+              <div class="team-mate">
+                <div class="title">
+                  <span class="fw-bold mb-1">Name</span>
+                  <span>01 dec</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo...</p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="col-lg-6 order-lg-0 order-first">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="container-fluid ninesCard card shadow my-2" id="tournament-board">
+                <div class="mainbar">
+                  <span>Tournaments</span>
+                  <div class="btn-container">
+                    <button class="upcoming-btn">Upcoming</button>
+                    <button class="upcoming-btn btn-color">past</button>
+                  </div>
+                  <a href="./pages/tournament.html" class="tournament-btn">Create tournament</a>
+                </div>
+
+                <div class="table-responsive tournament-table">
+                  <table class="table" id="tournamentsTableHome">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price Fund</th>
+                        <th scope="col">Start (UTC+03)</th>
+                        <th scope="col">Participants</th>
+                        <th scope="col">Format</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <a href="./pages/tournament.html" class="goto-btn">
+                  Go to tournaments
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <h2 class="text-center text-light font-weight-bold m-3">Top Plays</h2>
+            <div class="col-lg-4 col-sm-6 p-0">
+              <div class="videoCard card shadow m-2">
+                <div class="video-section">
+                  <img src="https://placehold.co/300x200" alt="Video Thumbnail">
+                </div>
+                <div class="details-section d-flex justify-content-between align-items-center p-3">
+                  <div class="video-title text-truncate text-light">
+                    <strong>Exciting Match Highlights</strong>
+                  </div>
+                  <div class="like-dislike d-flex align-items-center gap-3 p-1">
+                    <div class="like d-flex">
+                      <i class="fas fa-thumbs-up text-success"></i>
+                      <span>85%</span>
+                    </div>
+                    <div class="dislike d-flex">
+                      <i class="fas fa-thumbs-down text-danger"></i>
+                      <span>12%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 p-0">
+              <div class="videoCard card shadow m-2">
+                <div class="video-section">
+                  <img src="https://placehold.co/300x200" alt="Video Thumbnail">
+                </div>
+                <div class="details-section d-flex justify-content-between align-items-center p-3">
+                  <div class="video-title text-truncate text-light">
+                    <strong>Exciting Match Highlights</strong>
+                  </div>
+                  <div class="like-dislike d-flex align-items-center gap-3 p-1">
+                    <div class="like d-flex">
+                      <i class="fas fa-thumbs-up text-success"></i>
+                      <span>85%</span>
+                    </div>
+                    <div class="dislike d-flex">
+                      <i class="fas fa-thumbs-down text-danger"></i>
+                      <span>12%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 p-0">
+              <div class="videoCard card shadow m-2">
+                <div class="video-section">
+                  <img src="https://placehold.co/300x200" alt="Video Thumbnail">
+                </div>
+                <div class="details-section d-flex justify-content-between align-items-center p-3">
+                  <div class="video-title text-truncate text-light">
+                    <strong>Exciting Match Highlights</strong>
+                  </div>
+                  <div class="like-dislike d-flex align-items-center gap-3 p-1">
+                    <div class="like d-flex">
+                      <i class="fas fa-thumbs-up text-success"></i>
+                      <span>85%</span>
+                    </div>
+                    <div class="dislike d-flex">
+                      <i class="fas fa-thumbs-down text-danger"></i>
+                      <span>12%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 p-0">
+              <div class="videoCard card shadow m-2">
+                <div class="video-section">
+                  <img src="https://placehold.co/300x200" alt="Video Thumbnail">
+                </div>
+                <div class="details-section d-flex justify-content-between align-items-center p-3">
+                  <div class="video-title text-truncate text-light">
+                    <strong>Exciting Match Highlights</strong>
+                  </div>
+                  <div class="like-dislike d-flex align-items-center gap-3 p-1">
+                    <div class="like d-flex">
+                      <i class="fas fa-thumbs-up text-success"></i>
+                      <span>85%</span>
+                    </div>
+                    <div class="dislike d-flex">
+                      <i class="fas fa-thumbs-down text-danger"></i>
+                      <span>12%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 p-0">
+              <div class="videoCard card shadow m-2">
+                <div class="video-section">
+                  <img src="https://placehold.co/300x200" alt="Video Thumbnail">
+                </div>
+                <div class="details-section d-flex justify-content-between align-items-center p-3">
+                  <div class="video-title text-truncate text-light">
+                    <strong>Exciting Match Highlights</strong>
+                  </div>
+                  <div class="like-dislike d-flex align-items-center gap-3 p-1">
+                    <div class="like d-flex">
+                      <i class="fas fa-thumbs-up text-success"></i>
+                      <span>85%</span>
+                    </div>
+                    <div class="dislike d-flex">
+                      <i class="fas fa-thumbs-down text-danger"></i>
+                      <span>12%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 p-0">
+              <div class="videoCard card shadow m-2">
+                <div class="video-section">
+                  <img src="https://placehold.co/300x200" alt="Video Thumbnail">
+                </div>
+                <div class="details-section d-flex justify-content-between align-items-center p-3">
+                  <div class="video-title text-truncate text-light">
+                    <strong>Exciting Match Highlights</strong>
+                  </div>
+                  <div class="like-dislike d-flex align-items-center gap-3 p-1">
+                    <div class="like d-flex">
+                      <i class="fas fa-thumbs-up text-success"></i>
+                      <span>85%</span>
+                    </div>
+                    <div class="dislike d-flex">
+                      <i class="fas fa-thumbs-down text-danger"></i>
+                      <span>12%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <button class="btn btn-dark d-flex align-items-center gap-2" style="visibility: hidden;">
+                Start <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="btn btn-dark d-flex align-items-center gap-2">
+                Next <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="col-lg-3 col-sm-6">
+          <div class="container-fluid ninesCard card shadow my-2 player-rank" id="teams-card">
+            <div class="topbar"><span>Teams TOP</span></div>
+
+            <br>
+
+            <div class="playersTopCard">
+              <div class="imgDiv">
+                <img src="./img/profile2.png" alt="">
+              </div>
+              <div class="descDiv">
+                <div class="topDesc">dawn7#0606</div>
+                <div class="bottomDesc">
+                  <div class="leftDesc">
+                    <span>1606</span>
+                    <span>ELO</span>
+                  </div>
+                  <div class="dotDiv"></div>
+                  <div class="rightDesc">gold</div>
+                </div>
+              </div>
+              <div class="numDiv">1</div>
+            </div>
+
+            <br>
+
+            <div class="playersTopCard">
+              <div class="imgDiv">
+                <img src="./img/profile2.png" alt="">
+              </div>
+              <div class="descDiv">
+                <div class="topDesc">Kataomi#ooo</div>
+                <div class="bottomDesc">
+                  <div class="leftDesc">
+                    <span>1542</span>
+                    <span>ELO</span>
+                  </div>
+                  <div class="dotDiv"></div>
+                  <div class="rightDesc">silver</div>
+                </div>
+              </div>
+              <div class="numDiv">2</div>
+            </div>
+
+            <br>
+
+            <div class="playersTopCard">
+              <div class="imgDiv">
+                <img src="./img/profile2.png" alt="">
+              </div>
+              <div class="descDiv">
+                <div class="topDesc">Padaomi#222</div>
+                <div class="bottomDesc">
+                  <div class="leftDesc">
+                    <span>1606</span>
+                    <span>ELO</span>
+                  </div>
+                  <div class="dotDiv"></div>
+                  <div class="rightDesc">silver</div>
+                </div>
+              </div>
+              <div class="numDiv">3</div>
+            </div>
+
+            <br>
+
+            <div class="playersTopCard">
+              <div class="imgDiv">
+                <img src="./img/profile2.png" alt="">
+              </div>
+              <div class="descDiv">
+                <div class="topDesc">Hkskiro#999</div>
+                <div class="bottomDesc">
+                  <div class="leftDesc">
+                    <span>1524</span>
+                    <span>ELO</span>
+                  </div>
+                  <div class="dotDiv"></div>
+                  <div class="rightDesc">silver</div>
+                </div>
+              </div>
+              <div class="numDiv">4</div>
+            </div>
+
+            <br>
+
+            <div class="playersTopCard">
+              <div class="imgDiv">
+                <img src="./img/profile2.png" alt="">
+              </div>
+              <div class="descDiv">
+                <div class="topDesc">Hordie#444</div>
+                <div class="bottomDesc">
+                  <div class="leftDesc">
+                    <span>1524</span>
+                    <span>ELO</span>
+                  </div>
+                  <div class="dotDiv"></div>
+                  <div class="rightDesc">silver</div>
+                </div>
+              </div>
+              <div class="numDiv">5</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+    <!-- forms -->
+
+    <section class="forms">
+      <div class="dimmed-background"></div>
+      <div class="form login">
+        <button class="close-btn" onclick="closeForms()">&#10005;</button>
+        <div class="form-content">
+          <header>Login</header>
+          <form action="#">
+            <div class="field input-field">
+              <input type="email" placeholder="Email" class="input" id="login_emailInput">
+            </div>
+
+            <div class="field input-field">
+              <input type="password" placeholder="Password" class="password" id="login_passwordInput">
+              <i class='fas fa-eye eye-icon'></i>
+            </div>
+
+            <div class="form-link">
+              <a href="#" class="forgot-pass" onclick="showForgotPassword()">Forgot password?</a>
+            </div>
+
+            <div class="field button-field">
+              <button id="loginBtn_A">Login</button>
+            </div>
+          </form>
+
+          <div class="form-link">
+            <span>Don't have an account? <a href="#" class="link signup-link"
+                onclick="activateSignUp()">Signup</a></span>
+          </div>
+        </div>
+
+        <div class="line-break"></div>
+
+        <div class="media-options">
+          <a href="#" class="field facebook">
+            <i class='fab fa-facebook facebook-icon'></i>
+            <span>Login with Facebook</span>
+          </a>
+        </div>
+
+        <div class="media-options">
+          <a href="#" class="field google">
+            <img src="img/google.png" alt="" class="google-img">
+            <span>Login with Google</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Signup Form -->
+
+      <div class="form signup">
+        <button class="close-btn" onclick="closeForms()">&#10005;</button>
+        <div class="form-content">
+          <header>Signup</header>
+          <form action="#">
+            <div class="field input-field">
+              <input type="text" placeholder="Username" class="input" id="signUp_usernameInput">
+            </div>
+
+            <div class="field input-field">
+              <input type="email" placeholder="Email" class="input" id="signUp_emailInput">
+            </div>
+
+            <div class="field input-field">
+              <input type="password" placeholder="Create password" class="password" id="signUp_passwordInput">
+            </div>
+
+            <div class="field input-field">
+              <input type="password" placeholder="Confirm password" class="password" id="signUp_confPasswordInput">
+              <i class='fas fa-eye eye-icon'></i>
+            </div>
+
+            <div class="field button-field">
+              <button id="signUpBtn_A">Signup</button>
+            </div>
+          </form>
+
+          <div class="form-link">
+            <span>Already have an account?
+              <a href="#" class="link login-link" onclick="activateLogin()">Login</a>
+            </span>
+          </div>
+        </div>
+
+        <div class="line-break"></div>
+
+        <div class="media-options">
+          <a href="#" class="field facebook">
+            <i class='fab fa-facebook facebook-icon'></i>
+            <span>Login with Facebook</span>
+          </a>
+        </div>
+
+        <div class="media-options">
+          <a href="#" class="field google">
+            <img src="img/google.png" alt="" class="google-img">
+            <span>Login with Google</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Forgotten Password Form -->
+      <div class="form forgot">
+        <button class="close-btn" onclick="closeForms()">&#10005;</button>
+        <div class="form-content">
+          <header>Forgot Password</header>
+          <form action="#">
+            <div class="field input-field">
+              <input type="email" placeholder="Enter your email" class="input">
+            </div>
+            <div class="field button-field">
+              <button>Send Reset Link</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- body container ends -->
+
+    <!-- footer container starts -->
+
+    <div class="container-fluid">
+      <footer class="footercolor row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 m-1 m-md-4 top">
+        <div class="col mb-3">
+          <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+            <img src="./img/logo.png" alt="logo" />
+          </a>
+          <p class="text-body-secondary">© 2024</p>
+          <div class="social-media mt-5">
+            <a href="#" class="me-3 text-body-secondary"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="me-3 text-body-secondary"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="me-3 text-body-secondary"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-body-secondary"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col mb-3"></div>
+
+        <div class="col mb-3">
+          <h5>Navigation</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="./index.html" class="nav-link p-0 text-body-secondary">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="./pages/about.html" class="nav-link p-0 text-body-secondary">About</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="./pages/tournament.html" class="nav-link p-0 text-body-secondary">Tournament</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="./pages/events.html" class="nav-link p-0 text-body-secondary">Events</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Navigation</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="./pages/rating.html" class="nav-link p-0 text-body-secondary">Rating</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="./pages/faqs.html" class="nav-link p-0 text-body-secondary">FAQs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="./pages/news.html" class="nav-link p-0 text-body-secondary">News</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Company</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-secondary">About Us</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-secondary">Partners</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-secondary">Jobs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-secondary">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- footer container ends  -->
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

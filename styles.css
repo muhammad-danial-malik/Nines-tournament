@@ -1,0 +1,1130 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+body {
+  background: #050203;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+#ninesTournamnetContainer nav {
+  background: #050203;
+  padding: 1vw 4vw;
+  border-bottom: 2px solid #272a2e;
+}
+
+#ninesTournamnetContainer nav #logo img {
+  height: 60px;
+  width: 140px;
+}
+
+#ninesTournamnetContainer nav ul li {
+  margin-left: 30px;
+}
+
+#ninesTournamnetContainer nav ul li a {
+  text-decoration: none;
+  color: #e0e0ff99;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  transition: ease 0.3s;
+}
+
+#ninesTournamnetContainer nav ul li a i {
+  padding-right: 5px;
+  color: #fff;
+}
+
+#ninesTournamnetContainer nav ul li a.active,
+#ninesTournamnetContainer nav ul li a:hover {
+  color: #fff;
+  border-bottom: 2px solid #ff5e00;
+}
+
+#ninesTournamnetContainer nav ul li a.active i,
+#ninesTournamnetContainer nav ul li a:hover i {
+  color: #ff5e00;
+}
+
+#ninesTournamnetContainer nav .loginBtn {
+  text-decoration: none;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-color: #272a2e;
+  border: 2px solid #272a2e;
+}
+
+#ninesTournamnetContainer nav .loginBtn:hover {
+  background-color: #ff5e00;
+  color: #fff;
+  border: 2px solid #ff5e00;
+}
+
+#ninesTournamnetContainer nav .loginBtn:focus {
+  outline: none;
+}
+
+#ninesTournamnetContainer #login-card {
+  background: #272a2e;
+  color: white;
+  height: 350px;
+  padding: 20px;
+}
+
+#ninesTournamnetContainer #login-card .login-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+  height: 80px;
+}
+
+#ninesTournamnetContainer #login-card .level {
+  display: flex;
+  font-size: 14px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 500;
+  height: 88px;
+  justify-content: space-between;
+  letter-spacing: normal;
+  line-height: 1.71;
+}
+
+#ninesTournamnetContainer #login-card .money {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+#ninesTournamnetContainer #login-card .money .gradient-icon {
+  display: inline-block;
+  background-image: linear-gradient(99deg, #ff5e00, #f54562 54%, #c32de1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-right: 10px;
+}
+
+#ninesTournamnetContainer #login-card .signin-btn {
+  background-image: linear-gradient(99deg, #ff5e00, #f54562 54%, #c32de1);
+  box-shadow: 0 8px 8px -4px rgba(245, 69, 98, 0.12),
+    0 16px 24px 0 rgba(245, 69, 98, 0.24), 0 2px 4px -1px rgba(27, 10, 82, 0.12),
+    0 0 1px 0 rgba(245, 69, 98, 0.24);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  height: 36px;
+  letter-spacing: normal;
+  line-height: 1.5;
+}
+
+#ninesTournamnetContainer #login-card .signin-btn:hover {
+  background-image: linear-gradient(99deg, #c32de1, #f54562 54%, #ff5e00);
+}
+
+#ninesTournamnetContainer #login-card .line {
+  background-image: linear-gradient(180deg, #090e14, #222529 53%, #2d2f33);
+  border-radius: 4px;
+  box-shadow: inset 8px 8px 40px 0 rgba(9, 14, 20, 0.4),
+    inset -4px -4px 8px 0 rgba(224, 224, 255, 0.04),
+    inset 0 1px 1px 0 rgba(9, 14, 20, 0.4);
+  display: block;
+  height: 8px;
+  margin: 20px auto 12px;
+  position: relative;
+  width: 100%;
+}
+
+#ninesTournamnetContainer #tournament-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("./img/tournament.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  opacity: 0.9;
+  z-index: -1;
+  transform: scale(1.1);
+}
+
+#ninesTournamnetContainer #tournament-card {
+  /* background-image: url("./img/tournament.jpg"); */
+  color: #000;
+  height: 320px;
+  text-transform: uppercase;
+  font-size: 30px !important;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  border: none;
+  overflow: hidden;
+}
+
+#ninesTournamnetContainer #tournament-card .over-btn {
+  background-color: #333;
+  border-radius: 4px;
+  color: #ff5e00;
+  width: fit-content;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.85;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+#ninesTournamnetContainer #tournament-card .btn-color {
+  position: absolute;
+  right: 15px;
+  font-style: italic;
+  color: #fff;
+}
+
+#ninesTournamnetContainer #tournament-card .apply-color {
+  background: #32cd32;
+  color: #fff;
+  position: absolute;
+  bottom: 15px;
+  text-transform: capitalize;
+}
+
+#ninesTournamnetContainer #tournament-card .apply-color {
+  background: #32cd32;
+  color: #fff;
+  position: absolute;
+  bottom: 15px;
+  text-transform: capitalize;
+}
+
+#ninesTournamnetContainer #tournament-card .apply-color:hover {
+  background: #2bb12b;
+  color: #e0e0e0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#ninesTournamnetContainer .player-rank {
+  background: #24272b;
+  color: white;
+  height: 375px;
+  padding: 20px;
+}
+
+#ninesTournamnetContainer .player-rank .topbar {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* players top card starts */
+
+#ninesTournamnetContainer .player-rank .playersTopCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: #24272b;
+  color: white;
+  cursor: pointer;
+}
+
+#ninesTournamnetContainer .player-rank .playersTopCard .imgDiv {
+  height: 50px;
+  width: 50px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+#ninesTournamnetContainer .player-rank .playersTopCard .imgDiv img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#ninesTournamnetContainer .player-rank .playersTopCard .descDiv {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#ninesTournamnetContainer .player-rank .playersTopCard .descDiv .bottomDesc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #9596ab;
+  font-size: 0.9rem;
+}
+
+#ninesTournamnetContainer .player-rank .playersTopCard .descDiv .bottomDesc .leftDesc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+#ninesTournamnetContainer .player-rank .playersTopCard .descDiv .bottomDesc .dotDiv {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: #9596ab;
+}
+
+#ninesTournamnetContainer .player-rank .playersTopCard .numDiv {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: #2b2e33;
+  color: white;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+}
+
+/* player top card ends */
+
+
+/* player video card starts */
+#ninesTournamnetContainer .videoCard {
+  background-color: #1e1f23;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#ninesTournamnetContainer .videoCard .video-section {
+  height: 80%;
+}
+
+#ninesTournamnetContainer .videoCard .video-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#ninesTournamnetContainer .videoCard .details-section {
+  height: 20%;
+  background-color: #2a2c31;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#ninesTournamnetContainer .videoCard .video-title {
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#ninesTournamnetContainer .videoCard .like-dislike i {
+  font-size: 1.2rem;
+}
+
+#ninesTournamnetContainer .videoCard .like-dislike span {
+  margin-left: 5px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* player video card ends */
+
+#ninesTournamnetContainer #teammateCard {
+  background: #24272b;
+  color: white;
+  height: fit-content;
+  padding: 20px;
+}
+
+#ninesTournamnetContainer #teammateCard .topbar {
+  font-size: 24px;
+}
+
+#ninesTournamnetContainer #teammateCard .teamMatesAll {
+  display: flex;
+  flex-direction: column;
+}
+
+#ninesTournamnetContainer #teammateCard .team-mate:hover {
+  background-color: #2b2f34;
+}
+
+#ninesTournamnetContainer #teammateCard .team-mate .title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-stretch: normal;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.23;
+}
+
+#ninesTournamnetContainer #teammateCard .team-mate .title p {
+  line-height: 1.54;
+  max-width: 200ch;
+  overflow: hidden;
+  text-align: left;
+  width: 260px;
+}
+
+/* tournament card table starts */
+
+#ninesTournamnetContainer #tournamentsTableHome {
+  background-color: transparent;
+}
+
+#ninesTournamnetContainer #tournamentsTableHome thead,
+#ninesTournamnetContainer #tournamentsTableHome tbody {
+  background-color: transparent;
+  color: white;
+}
+
+#ninesTournamnetContainer #tournamentsTableHome th,
+#ninesTournamnetContainer #tournamentsTableHome td {
+  background-color: transparent;
+  color: white;
+  border-color: #3a3d42;
+}
+
+/* tournament card table ends */
+
+#ninesTournamnetContainer #tournament-board {
+  background: #24272b;
+  color: white;
+  height: 360px;
+  padding: 20px;
+}
+
+#ninesTournamnetContainer #tournament-board .mainbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#ninesTournamnetContainer #tournament-board .mainbar span {
+  font-size: 24px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 1.33;
+}
+
+#ninesTournamnetContainer #tournament-board .mainbar .tournament-btn {
+  background-image: linear-gradient(99deg, #ff5e00, #f54562 54%, #c32de1);
+  box-shadow: 0 8px 8px -4px rgba(245, 69, 98, 0.12),
+    0 16px 24px 0 rgba(245, 69, 98, 0.24), 0 2px 4px -1px rgba(27, 10, 82, 0.12),
+    0 0 1px 0 rgba(245, 69, 98, 0.24);
+  color: #fff;
+  border: none;
+  width: fit-content;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  height: 36px;
+  letter-spacing: normal;
+  line-height: 1.5;
+  padding: 6px 16px;
+  transform: all;
+}
+
+#ninesTournamnetContainer #tournament-board .mainbar .tournament-btn:hover {
+  background-image: linear-gradient(99deg, #c32de1, #f54562 54%, #ff5e00);
+}
+
+#ninesTournamnetContainer #tournament-board .mainbar .upcoming-btn {
+  background-image: linear-gradient(180deg, #383a3d, #2d2f33);
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  height: 32px;
+  letter-spacing: normal;
+  line-height: 32px;
+  text-align: center;
+  width: 146px;
+  border: none;
+}
+
+#ninesTournamnetContainer #tournament-board .mainbar .btn-color {
+  background-image: linear-gradient(180deg, #090e14, #222529 61%, #2d2f33);
+  border-radius: 2px;
+  box-shadow: inset 8px 8px 40px 0 rgba(9, 14, 20, 0.4),
+    inset -4px -4px 8px 0 rgba(224, 224, 255, 0.04),
+    inset 0 1px 1px 0 rgba(9, 14, 20, 0.4);
+  font-weight: normal;
+}
+
+#ninesTournamnetContainer #tournament-board .tournament-table tr {
+  font-size: 14px;
+  line-height: 1.71;
+  cursor: pointer;
+  height: 64px;
+  width: 100%;
+}
+
+#ninesTournamnetContainer #tournament-board .goto-btn {
+  background-color: rgba(224, 224, 255, 0.05);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  font-stretch: normal;
+  font-style: none;
+  width: fit-content;
+  height: 36px;
+  letter-spacing: normal;
+  line-height: 1.71;
+  padding: 6px 16px;
+  white-space: nowrap;
+}
+
+#ninesTournamnetContainer #teams-card {
+  background: #24272b;
+  color: white;
+  height: fit-content;
+  padding: 20px;
+}
+
+#ninesTournamnetContainer #teams-card .topbar {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+/* footer  */
+#ninesTournamnetContainer .footercolor {
+  color: #e0e0ff99;
+  background: #000;
+}
+
+#ninesTournamnetContainer .footercolor p,
+#ninesTournamnetContainer .footercolor a {
+  color: #e0e0ff99 !important;
+}
+
+#ninesTournamnetContainer .footercolor a img {
+  height: 60px;
+  width: 140px;
+}
+
+#ninesTournamnetContainer .social-media a {
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+
+#ninesTournamnetContainer .social-media a:hover i {
+  color: #ff5e00;
+}
+
+/* form styling start */
+.dimmed-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.form {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  max-width: 430px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 6px;
+  background: #272a2e;
+  color: white;
+  z-index: 2;
+}
+
+.form.login {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.forms.show-login .form.login {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.forms.show-login .dimmed-background,
+.forms.show-signup .dimmed-background,
+.forms.show-forgot .dimmed-background {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.form.signup {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.forms.show-signup .form.signup {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.forms.show-signup .form.login,
+.forms.show-signup .form.forgot {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.form .close-btn:hover {
+  color: #f5a623;
+}
+
+header {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+
+form {
+  margin-top: 30px;
+}
+
+.form .field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+
+.field input,
+.field button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 6px;
+}
+
+.field input {
+  outline: none;
+  padding: 0 15px;
+  background-color: #1e2125;
+  color: #f5f5f5;
+  border: 1px solid #3a3d42;
+}
+
+.field input:focus {
+  border-bottom-width: 2px;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #8b8b8b;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.eye-icon:hover {
+  color: #f5a623;
+}
+
+.field button {
+  color: #fff;
+  background-image: linear-gradient(99deg, #ff5e00, #f54562 54%, #c32de1);
+  box-shadow: 0 8px 8px -4px rgba(245, 69, 98, 0.12),
+    0 16px 24px 0 rgba(245, 69, 98, 0.24), 0 2px 4px -1px rgba(27, 10, 82, 0.12),
+    0 0 1px 0 rgba(245, 69, 98, 0.24);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.field button:hover {
+  background-image: linear-gradient(99deg, #c32de1, #f54562 54%, #ff5e00);
+}
+
+.form-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.form-link span,
+.form-link a {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.form a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.form-content a:hover {
+  color: #f5a623;
+  text-decoration: underline;
+}
+
+.line-break {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  margin: 36px 0;
+  background-color: #d4d4d4;
+}
+
+.line-break::before {
+  content: "Or";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #272a2e;
+  color: #8b8b8b;
+  padding: 0 15px;
+}
+
+.media-options a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a.facebook {
+  color: #fff;
+  background-color: #4267b2;
+}
+
+a.facebook:hover {
+  background-color: #3b5998;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+a.facebook .facebook-icon {
+  height: 27px;
+  width: 27px;
+  color: #0171d3;
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.facebook-icon,
+img.google-img {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+
+img.google-img {
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+}
+
+a.google {
+  border: 1px solid #cacaca;
+}
+
+a.google:hover {
+  border-color: #ddd;
+  transform: scale(1.05);
+}
+
+a.google span {
+  font-weight: 500;
+  opacity: 0.8;
+  color: #fff;
+}
+
+.form.forgot {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.forms.show-forgot .form.forgot {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.forms.show-forgot .form.login,
+.forms.show-forgot .form.signup {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* form styling end */
+
+/* About styling start  */
+
+#ninesTournamnetContainer .text-blue {
+  color: #00aeef;
+}
+
+/* About styling ends  */
+
+/* tournament styling starts */
+.hero {
+  position: relative;
+  background: url('./img/img2.jpg') no-repeat center center/cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  border-radius: 0.5rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+
+}
+
+.hero span {
+  color: #ffcc00;
+}
+
+.tournament-table {
+  background-color: #272a2e;
+  border-radius: 8px;
+  padding: 15px;
+  color: #fff;
+}
+
+.tournament-table .header {
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 0;
+}
+
+.tournament-table .row {
+  padding: 10px 0;
+  border-bottom: 1px solid #3a3d42;
+}
+
+.tournament-table .row:last-child {
+  border-bottom: none;
+}
+
+.text-green {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+#pagination {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: #000;
+}
+
+#pagination li {
+  display: inline;
+}
+
+#pagination li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#pagination li a.active {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+#pagination li a:hover:not(.active) {
+  background-color: #272a2e;
+}
+
+.no-tournaments {
+  padding: 30px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.finished-tournament {
+  min-width: 600px;
+}
+
+/* tournament styling ends */
+
+/* events styling start */
+
+#ninesTournamnetContainer #eventsCarousel {
+  height: 300px;
+}
+
+#ninesTournamnetContainer #eventsCarousel .carousel-caption {
+  top: 52%;
+  transform: translateY(-50%);
+  bottom: unset;
+  text-align: center;
+}
+
+#ninesTournamnetContainer #eventsCarousel .carousel-item img {
+  height: 300px;
+  object-fit: cover;
+}
+
+#ninesTournamnetContainer .card-img-top {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+#ninesTournamnetContainer .logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+/* events styling end */
+
+
+/* faqs styling start  */
+
+.faq-box {
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 0;
+  text-align: center;
+  color: #e0e0ff;
+  background-color: #272a2e;
+  box-shadow: rgba(20, 20, 20, 0.5) 0px 0px 5px 2px;
+}
+
+.faq-box:hover {
+  transform: scale(1.05);
+}
+
+/* Faqs styling ends */
+
+/* rating styling start */
+.table-container {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.gold-icon {
+  color: gold;
+}
+
+.silver-icon {
+  color: silver;
+}
+
+.bronze-icon {
+  color: #cd7f32;
+}
+
+.team-wrapper img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+th,
+td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.nickname {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#tabs-menu {
+  padding: 24px 0 3px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom-left-radius: 0.5px;
+  border-bottom-right-radius: 0.5px;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  font-size: 1rem;
+}
+
+.nav-tabs .nav-link.active {
+  border-bottom: 2px solid #0d6efd;
+  font-weight: bold;
+  color: #fff;
+  background-color: transparent;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.custom-img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+}
+
+/* rating styling end */
+
+/* news styling start */
+.news-box {
+  background-color: #212529;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.news-box img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.subtitle {
+  color: gray;
+  font-size: 12px;
+  margin-top: 0.5rem;
+}
+
+.news-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0px;
+  color: #fff;
+}
+
+/* news styling ends */
+
+@media screen and (max-width: 1200px) {
+  #ninesTournamnetContainer nav {
+    padding: 1vw 2vw;
+  }
+
+  #ninesTournamnetContainer nav ul li {
+    margin-left: 20px;
+  }
+
+  #ninesTournamnetContainer nav ul li a {
+    font-size: 15px;
+  }
+
+  #ninesTournamnetContainer nav .loginBtn {
+    font-size: 20px;
+    padding: 7px 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #ninesTournamnetContainer nav .loginBtn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+
+  #ninesTournamnetContainer nav .loginBtn:hover {
+    background-color: #ff5e00;
+    color: #fff;
+    border: 2px solid #ff5e00;
+  }
+
+  #ninesTournamnetContainer .form {
+    width: 90%;
+  }
+
+  #ninesTournamnetContainer .logo-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  #ninesTournamnetContainer #eventsCarousel {
+    height: 200px;
+  }
+
+  #ninesTournamnetContainer #eventsCarousel .carousel-item img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .news-box img {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 577px) {
+  #ninesTournamnetContainer #teammateCard .teamMatesAll {
+    overflow-x: auto;
+    height: 450px;
+  }
+}
